@@ -11,8 +11,22 @@ import SwiftUI
 struct HistoryView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                Text("HistoryView!")
+            List {
+                HStack{
+                    Text("Yangın tehlikesi oluştu. Kullanıcı tarafından önlendi.")
+                       .multilineTextAlignment(.leading)
+                       .lineLimit(3)
+                    Spacer()
+                    Text("Bugün 10:15")
+                }
+                HStack{
+                    Text("Su baskını tehlikesi oluştu. Tamirci çağrıldı. Önlendi.")
+                       .multilineTextAlignment(.leading)
+                       .lineLimit(3)
+                    Spacer()
+                    Text("17/03/19 17:15")
+                }
+               
             }.navigationBarTitle(Text("Evim > Olaylar"))
         }
     }

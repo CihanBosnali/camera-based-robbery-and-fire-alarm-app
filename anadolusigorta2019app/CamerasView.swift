@@ -12,7 +12,11 @@ struct CamerasView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                CameraListRow(videoAvailable: false, cameraAvailable: false, name: "Oturma Odası")
+                VStack{
+                    CameraListRow(videoAvailable: false, cameraAvailable: false, name: "Oturma Odası")
+                    CameraListRow(videoAvailable: true, cameraAvailable: true, name: "Mutfak")
+                }
+                
             }.navigationBarTitle(Text("Evim > Kameralar"))
 
         }
