@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TestView.swift
 //  anadolusigorta2019app
 //
 //  Created by cihan on 23.11.2019.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TestView: View {
     var body: some View {
-        Text("Content view!")
+        Text("Test View!")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TestView()
     }
 }
