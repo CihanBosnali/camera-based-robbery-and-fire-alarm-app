@@ -27,6 +27,30 @@ struct HomeView: View {
                     CircleImage()
                     .offset(y: -80)
                     .padding(.bottom, -80)
+                    
+                    HStack{
+                        VStack{
+                            Text("Yangın")
+                                .fontWeight(.bold)
+                            Image("Ayda")
+                            Text("Güvenli")
+
+                        }
+                        Spacer().frame(width: 50.0)
+                        VStack{
+                            Text("Hırsızlık")
+                                .fontWeight(.bold)
+                            Image("Ayda")
+                            Text("Güvenli")
+                        }
+                        Spacer().frame(width: 50.0)
+                        VStack{
+                            Text("Sızıntı")
+                                .fontWeight(.bold)
+                            Image("Ayda")
+                            Text("Güvenli")
+                        }
+                    }.padding()
                 }
                    
             }.navigationBarTitle(Text("Evim"))
