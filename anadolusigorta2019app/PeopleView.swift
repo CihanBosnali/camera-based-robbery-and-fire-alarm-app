@@ -10,7 +10,14 @@ import SwiftUI
 
 struct PeopleView: View {
     var body: some View {
-        Text("PeopleView!")
+        
+        NavigationView {
+
+            ScrollView {
+                Text("PeopleView!")
+            }.navigationBarTitle(Text("Evim > Kişiler"))
+        }
+        
     }
 }
 

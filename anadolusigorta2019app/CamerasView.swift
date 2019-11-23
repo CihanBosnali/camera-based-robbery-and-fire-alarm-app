@@ -10,7 +10,13 @@ import SwiftUI
 
 struct CamerasView: View {
     var body: some View {
-        Text("CamerasView!")
+        NavigationView {
+            ScrollView {
+                CameraListRow(videoAvailable: false, name: "Oturma Odası")
+            }.navigationBarTitle(Text("Evim > Kameralar"))
+
+        }
+        
     }
 }
 
