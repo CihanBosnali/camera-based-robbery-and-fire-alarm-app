@@ -10,16 +10,13 @@ import SwiftUI
 
 struct PeopleView: View {
     var body: some View {
-        
         NavigationView {
-
             List {
                 NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
                     PersonRow(name: "Ayda Selen Bozkurt", email: "aselen@gmail.com", number: "0599 999 9999")
                 }
-                }.navigationBarTitle(Text("Evim > Kişiler"))
+            }.navigationBarTitle(Text("Evim > Kişiler"))
         }
-        
     }
 }
 
