@@ -13,8 +13,12 @@ struct CamerasView: View {
         NavigationView {
             ScrollView {
                 VStack{
-                    CameraListRow(videoAvailable: true, cameraAvailable: true, name: "Oturma Odası")
-                    CameraListRow(videoAvailable: false, cameraAvailable: false, name: "Mutfak")
+                    CameraListRow(videoAvailable: false, cameraAvailable: false, name: "Oturma Odası")
+                    CameraListRow(videoAvailable: true, cameraAvailable: true, name: "Mutfak")
+                    
+                    Button(action: {}) {
+                        Image("ekleButton").renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                    }
                 }
                 
             }.navigationBarTitle(Text("Evim > Kameralar"))
