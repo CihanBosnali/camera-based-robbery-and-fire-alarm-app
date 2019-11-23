@@ -22,35 +22,58 @@ struct HomeView: View {
             ScrollView{
                 VStack{
                     MapView()
-                    .frame(height: 200.0)
+                    .frame(height: 250.0)
                     
                     CircleImage()
-                    .offset(y: -80)
+                    .offset(y: -150)
                     .padding(.bottom, -80)
                     
                     HStack{
                         VStack{
                             Text("Yangın")
                                 .fontWeight(.bold)
-                            Image("Ayda")
+                            Image("tik")
                             Text("Güvenli")
 
                         }
-                        Spacer().frame(width: 50.0)
+                        Spacer().frame(width: 30.0)
                         VStack{
                             Text("Hırsızlık")
                                 .fontWeight(.bold)
-                            Image("Ayda")
+                            Image("tik")
                             Text("Güvenli")
                         }
-                        Spacer().frame(width: 50.0)
+                        Spacer().frame(width: 30.0)
                         VStack{
                             Text("Sızıntı")
                                 .fontWeight(.bold)
-                            Image("Ayda")
+                            Image("tik")
                             Text("Güvenli")
                         }
                     }.padding()
+                    
+                    HStack{
+                        Text("İstatistikler")
+                            .fontWeight(.bold)
+                        Spacer()
+                    }.padding()
+                    
+
+                    HStack{
+                        Text("Kişi Sayısı (Canlı):")
+                        Spacer()
+                    }.padding()
+                    
+                    HStack{
+                        Text("Kişi Sayısı (Son 24 saat):")
+                        Spacer()
+                    }.padding()
+                    
+                    HStack{
+                        Text("Olaylar (Son 24 Saat):")
+                        Spacer()
+                    }.padding()
+
                 }
                    
             }.navigationBarTitle(Text("Evim"))

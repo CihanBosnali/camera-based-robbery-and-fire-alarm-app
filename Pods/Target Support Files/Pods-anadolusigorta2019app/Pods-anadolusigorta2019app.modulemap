@@ -1,0 +1,6 @@
+framework module Pods_anadolusigorta2019app {
+  umbrella header "Pods-anadolusigorta2019app-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,12 @@
 		CFFEC09923894A7D002FE5E8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09823894A7D002FE5E8 /* PeopleView.swift */; };
 		CFFEC09D2389961F002FE5E8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09C2389961F002FE5E8 /* MapView.swift */; };
 		CFFEC09F23899968002FE5E8 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09E23899968002FE5E8 /* CircleImage.swift */; };
+		CFFEC0A12389B13E002FE5E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFEC0A02389B13E002FE5E8 /* GoogleService-Info.plist */; };
+		EEC88A10E6C0E091DAE0FDF1 /* Pods_anadolusigorta2019app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C863DCC4C6192103F5EB7CE /* Pods_anadolusigorta2019app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C863DCC4C6192103F5EB7CE /* Pods_anadolusigorta2019app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_anadolusigorta2019app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2503E42389322900DA0766 /* CameraListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListRow.swift; sourceTree = "<group>"; };
 		0F2503E82389714500DA0766 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
 		CFFEC0772389247F002FE5E8 /* anadolusigorta2019app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = anadolusigorta2019app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +43,9 @@
 		CFFEC09823894A7D002FE5E8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		CFFEC09C2389961F002FE5E8 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CFFEC09E23899968002FE5E8 /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		CFFEC0A02389B13E002FE5E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E34C1430173F3D495B7E7DB6 /* Pods-anadolusigorta2019app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-anadolusigorta2019app.debug.xcconfig"; path = "Target Support Files/Pods-anadolusigorta2019app/Pods-anadolusigorta2019app.debug.xcconfig"; sourceTree = "<group>"; };
+		F403F4D01B748B824B879E96 /* Pods-anadolusigorta2019app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-anadolusigorta2019app.release.xcconfig"; path = "Target Support Files/Pods-anadolusigorta2019app/Pods-anadolusigorta2019app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC88A10E6C0E091DAE0FDF1 /* Pods_anadolusigorta2019app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FD06BA02DF2A21A7D01F4C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E34C1430173F3D495B7E7DB6 /* Pods-anadolusigorta2019app.debug.xcconfig */,
+				F403F4D01B748B824B879E96 /* Pods-anadolusigorta2019app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88F00D416352D20F1F07AC3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C863DCC4C6192103F5EB7CE /* Pods_anadolusigorta2019app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFFEC06E2389247F002FE5E8 = {
 			isa = PBXGroup;
 			children = (
 				CFFEC0792389247F002FE5E8 /* anadolusigorta2019app */,
 				CFFEC0782389247F002FE5E8 /* Products */,
+				4FD06BA02DF2A21A7D01F4C7 /* Pods */,
+				88F00D416352D20F1F07AC3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +113,7 @@
 				CFFEC08023892483002FE5E8 /* Assets.xcassets */,
 				CFFEC08523892483002FE5E8 /* LaunchScreen.storyboard */,
 				CFFEC08823892483002FE5E8 /* Info.plist */,
+				CFFEC0A02389B13E002FE5E8 /* GoogleService-Info.plist */,
 				CFFEC08223892483002FE5E8 /* Preview Content */,
 			);
 			path = anadolusigorta2019app;
@@ -106,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFFEC08B23892483002FE5E8 /* Build configuration list for PBXNativeTarget "anadolusigorta2019app" */;
 			buildPhases = (
+				84C53023BB470D85183A23AF /* [CP] Check Pods Manifest.lock */,
 				CFFEC0732389247F002FE5E8 /* Sources */,
 				CFFEC0742389247F002FE5E8 /* Frameworks */,
 				CFFEC0752389247F002FE5E8 /* Resources */,
+				3FF5426354E23047F44D6E1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,12 +188,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFFEC08723892483002FE5E8 /* LaunchScreen.storyboard in Resources */,
+				CFFEC0A12389B13E002FE5E8 /* GoogleService-Info.plist in Resources */,
 				CFFEC08423892483002FE5E8 /* Preview Assets.xcassets in Resources */,
 				CFFEC08123892483002FE5E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FF5426354E23047F44D6E1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-anadolusigorta2019app/Pods-anadolusigorta2019app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-anadolusigorta2019app/Pods-anadolusigorta2019app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-anadolusigorta2019app/Pods-anadolusigorta2019app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84C53023BB470D85183A23AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-anadolusigorta2019app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFFEC0732389247F002FE5E8 /* Sources */ = {
@@ -314,6 +387,7 @@
 		};
 		CFFEC08C23892483002FE5E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34C1430173F3D495B7E7DB6 /* Pods-anadolusigorta2019app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +408,7 @@
 		};
 		CFFEC08D23892483002FE5E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F403F4D01B748B824B879E96 /* Pods-anadolusigorta2019app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
