@@ -23,6 +23,10 @@ struct HomeView: View {
                 VStack{
                     MapView()
                     .frame(height: 200.0)
+                    
+                    CircleImage()
+                    .offset(y: -80)
+                    .padding(.bottom, -80)
                 }
                    
             }.navigationBarTitle(Text("Evim"))
