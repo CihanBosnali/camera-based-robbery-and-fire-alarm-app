@@ -19,9 +19,14 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView{
-            Text("a")
-                .navigationBarTitle(
-                    Text("Evim"))
+            ScrollView{
+                VStack{
+                    MapView()
+                    .frame(height: 200.0)
+                }
+                   
+            }.navigationBarTitle(Text("Evim"))
+            
         }
     }
 }

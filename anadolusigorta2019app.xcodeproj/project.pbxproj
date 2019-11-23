@@ -19,6 +19,7 @@
 		CFFEC09523894A4B002FE5E8 /* CamerasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09423894A4B002FE5E8 /* CamerasView.swift */; };
 		CFFEC09723894A68002FE5E8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09623894A68002FE5E8 /* HistoryView.swift */; };
 		CFFEC09923894A7D002FE5E8 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09823894A7D002FE5E8 /* PeopleView.swift */; };
+		CFFEC09D2389961F002FE5E8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFEC09C2389961F002FE5E8 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CFFEC09423894A4B002FE5E8 /* CamerasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasView.swift; sourceTree = "<group>"; };
 		CFFEC09623894A68002FE5E8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		CFFEC09823894A7D002FE5E8 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
+		CFFEC09C2389961F002FE5E8 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				CFFEC09623894A68002FE5E8 /* HistoryView.swift */,
 				CFFEC09423894A4B002FE5E8 /* CamerasView.swift */,
 				CFFEC09223894A06002FE5E8 /* HomeView.swift */,
+				CFFEC09C2389961F002FE5E8 /* MapView.swift */,
 				CFFEC08023892483002FE5E8 /* Assets.xcassets */,
 				CFFEC08523892483002FE5E8 /* LaunchScreen.storyboard */,
 				CFFEC08823892483002FE5E8 /* Info.plist */,
@@ -171,6 +174,7 @@
 				CFFEC09323894A06002FE5E8 /* HomeView.swift in Sources */,
 				CFFEC07D2389247F002FE5E8 /* SceneDelegate.swift in Sources */,
 				CFFEC09523894A4B002FE5E8 /* CamerasView.swift in Sources */,
+				CFFEC09D2389961F002FE5E8 /* MapView.swift in Sources */,
 				CFFEC07F2389247F002FE5E8 /* ContentView.swift in Sources */,
 				0F2503E52389322900DA0766 /* CameraListRow.swift in Sources */,
 			);
