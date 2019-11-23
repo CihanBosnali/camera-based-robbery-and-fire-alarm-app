@@ -10,14 +10,18 @@ import SwiftUI
 
 struct CameraListRow: View {
     @State var videoAvailable: Bool
+    @State var cameraAvailable: Bool
     
     var name: String
     
     var body: some View {
-        
-        HStack() {
-        
-            Image("Ellipse3")
+        HStack{
+            if cameraAvailable {
+                Image("Ellipse3")
+            
+            }else {
+                Image("KirmiziEllipse")
+            }
             Text(name)
         
             
@@ -25,11 +29,12 @@ struct CameraListRow: View {
             
             if videoAvailable {
                 Button(action: {}){
-                Image("kesilmisyesil").renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+            
+                    Image("kilitley").renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
                 }
             } else {
                 Button(action: {}){
-                Image("kesilmiskirmizi").renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                Image("kilitli").renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
                 }
             }
             
@@ -43,7 +48,7 @@ struct CameraListRow: View {
 
 struct CameraListRow_Previews: PreviewProvider {
     static var previews: some View {
-        CameraListRow(videoAvailable: true, name: "Mutfak")
+        CameraListRow(videoAvailable: true, cameraAvailable: false, name: "Mutfak")
     }
 }
 
