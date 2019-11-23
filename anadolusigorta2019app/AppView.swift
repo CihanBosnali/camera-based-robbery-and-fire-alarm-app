@@ -19,23 +19,22 @@ struct AppView: View {
     var body: some View {
         
         TabView {
-            ContentView()
+            HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
             }
-
-            TestView()
+            CamerasView()
                 .tabItem {
                     Image(systemName: "video.fill")
                     Text("Cameras")
             }
-            TestView()
+            HistoryView()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("History")
             }
-            TestView()
+            PeopleView()
                 .tabItem {
                     Image(systemName: "person.fill")
                     Text("People")

@@ -1,5 +1,5 @@
 //
-//  TestView.swift
+//  CamerasView.swift
 //  anadolusigorta2019app
 //
 //  Created by cihan on 23.11.2019.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct TestView: View {
+struct CamerasView: View {
     var body: some View {
-        Text("Test View!")
+        Text("CamerasView!")
     }
 }
 
-struct TestView_Previews: PreviewProvider {
+struct CamerasView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView()
+        CamerasView()
     }
 }
