@@ -23,12 +23,17 @@ struct HomeView: View {
     @State var robberyState = 0
     @State var waterState = 0
     
+    @State var fireBypassed = false
+    @State var robberyBypassed = false
+    @State var waterBypassed = false
+
+    
     @State private var showAlert = false
 
     
     
     var alert: Alert {
-        Alert(title: Text("Tehlike"), message: Text("Evinizde tehlikeli bir durum oluşmuştur."), primaryButton: .default(Text("Acil Durum")){}, secondaryButton: .default(Text("Sorun Yok")){})
+        Alert(title: Text("Tehlike"), message: Text("Evinizde tehlikeli bir durum oluşmuştur."), primaryButton: .default(Text("Acil Durum")){self.danger()}, secondaryButton: .default(Text("Sorun Yok")){self.falseAlert()})
        }
     
     
@@ -122,23 +127,40 @@ struct HomeView: View {
                             })
                             HomeView.getFireProbabilty { fire in
                                 self.fireState = Int(round(fire*2))
-                                if self.fireState == 2 && !self.showAlert{
+                                if self.fireState == 2 && !self.showAlert && !self.fireBypassed{
                                     self.showAlert.toggle()
+                                }
+                                if self.fireBypassed{
+                                    self.fireState = 0
                                 }
                             }
                             
                             HomeView.getRobberyProbabilty { robbery in
                                 self.robberyState = Int(round(robbery*2))
-                                if self.robberyState == 2 && !self.showAlert{
+                                if self.robberyState == 2 && !self.showAlert && !self.robberyBypassed{
                                     self.showAlert.toggle()
+                                }
+                                if self.robberyBypassed{
+                                    self.robberyState = 0
                                 }
                             }
                             HomeView.getWaterProbabilty { water in
                                 self.waterState = Int(round(water*2))
-                                if self.waterState == 2 && !self.showAlert{
+                                if self.waterState == 2 && !self.showAlert && !self.waterBypassed{
                                     self.showAlert.toggle()
                                 }
+                                if self.waterBypassed{
+                                    self.waterState = 0
+                                }
                             }
+                            
+                            HomeView.checkBypassSituation{BypassArray in
+                                self.fireBypassed = BypassArray[0]
+                                self.robberyBypassed = BypassArray[1]
+                                self.waterBypassed = BypassArray[2]
+                            }
+                            
+                            self.checkBreakIn()
                         }
                     }.padding()
                     
@@ -149,8 +171,9 @@ struct HomeView: View {
                     }.padding()
                     
                     HStack{
-                        Text("Olaylar (Son 24 Saat):")
+                        Text("Evde Yaşayan Kişi Sayısı:")
                         Spacer()
+                        Text("3")
                     }.padding()
                 }
             }.navigationBarTitle(Text("Evim")).navigationBarItems(trailing: Button(action: {
@@ -177,6 +200,80 @@ struct HomeView: View {
         }
     }
     
+    func falseAlert(){
+        if fireState == 2 {
+            fireBypassed = true
+            HomeView.setBypass(item: "Fire", date: Date())
+
+        } else if robberyState == 2 {
+            robberyBypassed = true
+            HomeView.setBypass(item: "Robbery", date: Date())
+
+        } else if waterState == 2 {
+            waterBypassed = true
+            HomeView.setBypass(item: "Water", date: Date())
+        }
+    }
+    
+    func danger(){
+        // What should happen if in danger?
+    }
+    
+    func checkBreakIn(){
+        print("Checking Break-In", masterLocked, numberOfPeople)
+        if self.masterLocked && numberOfPeople > 0 && !robberyBypassed {
+            let db = Firestore.firestore()
+            let docRef = db.collection("Users").document(username)
+
+            docRef.updateData([
+                "robberyProbability": 0.99,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
+            }
+        }
+    }
+    
+    static func checkBypassSituation(completion: @escaping ([Bool]) -> ()){
+        // Bypass ends after 30 min and by hand?
+        let db = Firestore.firestore()
+        let docRef = db.collection("Users").document(username)
+
+        docRef.getDocument { (document, error) in
+              if let document = document, document.exists {
+                let isBypassedFire = (document.data()?["isBypassedFire"] ?? false)
+                let isBypassedRobbery = (document.data()?["isBypassedRobbery"] ?? false)
+                let isBypassedWater = (document.data()?["isBypassedWater"] ?? false)
+                
+                completion([isBypassedFire as! Bool, isBypassedRobbery as! Bool, isBypassedWater as! Bool])
+                
+              } else {
+                  print("Document does not exist")
+              }
+        }
+
+    }
+    
+    static func setBypass(item: String, date: Date){
+         let db = Firestore.firestore()
+         let docRef = db.collection("Users").document(username)
+         
+         docRef.updateData([
+             "isBypassed\(item)": true,
+             "\(item.lowercased())BypassTime": date,
+            "\(item.lowercased())Probability": 0.01
+
+         ]) { err in
+             if let err = err {
+                 print("Error updating document: \(err)")
+             } else {
+                 print("Document successfully updated")
+             }
+         }
+     }
     
     static func setMasterLockCondition(condition: Bool){
         let db = Firestore.firestore()
