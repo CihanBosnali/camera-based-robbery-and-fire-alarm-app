@@ -17,7 +17,7 @@ struct HistoryView: View {
                        .multilineTextAlignment(.leading)
                        .lineLimit(3)
                     Spacer()
-                    Text("Bugün 10:15")
+                    Text("Dün 10:15")
                 }
                 HStack{
                     Text("Su baskını tehlikesi oluştu. Tamirci çağrıldı. Önlendi.")

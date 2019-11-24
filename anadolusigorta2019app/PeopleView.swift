@@ -15,6 +15,9 @@ struct PeopleView: View {
                 NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
                     PersonRow(name: "Ayda Selen Bozkurt", email: "aselen@gmail.com", number: "0599 999 9999")
                 }
+                NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                    PersonRow(name: "Cihan Alperen Bosnalı", email: "cbosnali@gmail.com", number: "0533 333 3333")
+                }
             }.navigationBarTitle(Text("Evim > Kişiler"))
         }
     }
